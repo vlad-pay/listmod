@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Vlad</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список модов</title>
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #166088;
+            --accent: #4fc3f7;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #28a745;
+            --danger: #dc3545;
+            --warning: #ffc107;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .mod-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        
+        .category {
+            flex: 1 1 300px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .category:hover {
+            transform: translateY(-5px);
+        }
+        
+        .category-header {
+            padding: 1rem;
+            color: white;
+            text-align: center;
+        }
+        
+        .required .category-header {
+            background-color: var(--success);
+        }
+        
+        .allowed .category-header {
+            background-color: var(--accent);
+        }
+        
+        .banned .category-header {
+            background-color: var(--danger);
+        }
+        
+        .category h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .mod-list {
+            padding: 1rem;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .mod-item {
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            background-color: var(--light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .mod-name {
+            font-weight: 500;
+        }
+        
+        .mod-version {
+            font-size: 0.8rem;
+            color: #666;
+            background-color: #e9ecef;
+            padding: 0.2rem 0.5rem;
+            border-radius: 12px;
+        }
+        
+        .suggestion-section {
+            background-color: white;
+            padding: 2rem;
+            margin: 2rem auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        .suggestion-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .suggestion-btn:hover {
+            background-color: var(--secondary);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .mod-categories {
+                flex-direction: column;
+            }
+            
+            .category {
+                flex: 1 1 auto;
+            }
+            
+            .suggestion-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Список модов</h1>
+            <p>Актуальная информация о нужных, разрешённых и запрещённых модах</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="mod-categories">
+            <!-- Нужные моды -->
+            <div class="category required">
+                <div class="category-header">
+                    <h2>Нужные моды</h2>
+                    <p>Обязательные для установки</p>
+                </div>
+                <div class="mod-list">
+                    <div class="mod-item">
+                        <span class="mod-name">Chat heads</span>
+                        <span class="mod-version">0.4+1.21.1</span>
+                    </div>
+                    <div class="mod-item">
+                        <span class="mod-name">Emotecraft</span>
+                        <span class="mod-version">2.4.10</span>
+                    </div>
+                    <div class="mod-item">
+                        <span class="mod-name">Sound Physics Remasteret</span>
+                        <span class="mod-version">1.4.12</span>
+                    </div>
+                    <div class="mod-item">
+                        <span class="mod-name">Starterkit</span>
+                        <span class="mod-version">1.21.1+7.4</span>
+                    </div>
+                    <div class="mod-item">
+                        <span class="mod-name">Voice chat</span>
+                        <span class="mod-version">2.5.30</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Разрешённые моды -->
+            <div class="category allowed">
+                <div class="category-header">
+                    <h2>Разрешённые моды</h2>
+                    <p>Можно использовать</p>
+                </div>
+                <div class="mod-list">
+                    <div class="mod-item">
+                        <span class="mod-name">Xaero's Minimap</span>
+                        <span class="mod-version">любая версия</span>
+                    </div>
+                    <div class="mod-item">
+                      <span class="mod-name">Journey map</span>
+                        <span class="mod-version">любая версия</span>
+                    </div>
+                    <div class="mod-item">
+                        <span class="mod-name">Just Enough Items</span>
+                        <span class="mod-version">любая версия</span>
+                    </div>
+                    <div class="mod-item">
+                        <span class="mod-name">AppleSkin</span>
+                        <span class="mod-version">любая версия</span>
+                    </div>
+                    <div class="mod-item">
+                        <span class="mod-name">Mouse Tweaks</span>
+                        <span class="mod-version">любая версия</span>
+                    </div>
+                    <div class="mod-item">
+                        <span class="mod-name">Better Third Person</span>
+                        <span class="mod-version">любая версия</span>
+                    </div>
+                    <div class="mod-item">
+                        <span class="mod-name">Replay Mod</span>
+                        <span class="mod-version">любая версия</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Запрещённые моды -->
+            <div class="category banned">
+                <div class="category-header">
+                    <h2>Запрещённые моды</h2>
+                    <p>Использование наказуемо</p>
+                </div>
+                <div class="mod-list">
+                    <div class="mod-item">
+                        <span class="mod-name">X-Ray</span>
+                        <span class="mod-version">любая версия</span>
+                    </div>
+                    <div class="mod-item">
+                        <span class="mod-name">Baritone</span>
+                        <span class="mod-version">любая версия</span>
+                    </div>
+                    <div class="mod-item">
+                        <span class="mod-name">Wurst Client</span>
+                        <span class="mod-version">любая версия</span>
+                    </div>
+                    <div class="mod-item">
+                        <span class="mod-name">KillAura</span>
+                        <span class="mod-version">любая версия</span>
+                    </div>
+                    <div class="mod-item">
+                        <span class="mod-name">AutoClicker</span>
+                        <span class="mod-version">любая версия</span>
+                    </div>
+                    <div class="mod-item">
+                        <span class="mod-name">Reach Hack</span>
+                        <span class="mod-version">любая версия</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция для предложения модов -->
+        <div class="suggestion-section">
+            <h2>Хотите предложить мод?</h2>
+            <p>Если вы хотите предложить мод для добавления в список разрешённых или хотите сообщить о проблемном моде, пожалуйста, заполните нашу форму.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeiflxShx24ny8zQj5o8jydg3VKKkeRZ7SfHtrELJ75DwPCqA/viewform?usp=sf_link" class="suggestion-btn" target="_blank">Предложить мод</a>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>Последнее обновление: <span id="current-date"></span></p>
+            <p>© 2025 Список модов для сервера SlafDayCraft. Все права защищены.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Добавляем текущую дату в футер
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('ru-RU', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
