@@ -1,14 +1,4 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - A Pen by Vlad</title>
-  
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -156,6 +146,20 @@
             background-color: var(--secondary);
         }
         
+        .social-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .social-link:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+        
         footer {
             text-align: center;
             padding: 2rem 0;
@@ -297,6 +301,11 @@
             <h2>Хотите предложить мод?</h2>
             <p>Если вы хотите предложить мод для добавления в список разрешённых или хотите сообщить о проблемном моде, пожалуйста, заполните нашу форму.</p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSeiflxShx24ny8zQj5o8jydg3VKKkeRZ7SfHtrELJ75DwPCqA/viewform?usp=sf_link" class="suggestion-btn" target="_blank">Предложить мод</a>
+            
+            <div>
+                <p>Также вы можете написать нам в Telegram:</p>
+                <a href="https://t.me/SlafDayCraft" class="social-link" target="_blank">Наш Telegram-канал</a>
+            </div>
         </div>
     </main>
     
@@ -304,6 +313,7 @@
         <div class="container">
             <p>Последнее обновление: <span id="current-date"></span></p>
             <p>© 2025 Список модов для сервера SlafDayCraft. Все права защищены.</p>
+            <p>Присоединяйтесь к нам: <a href="https://t.me/SlafDayCraft" target="_blank">Telegram</a></p>
         </div>
     </footer>
     
@@ -315,9 +325,5 @@
             year: 'numeric'
         });
     </script>
-</body>
-</html>
-<!-- partial -->
-  
 </body>
 </html>
